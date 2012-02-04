@@ -84,3 +84,12 @@ The existing benchmarks should be pretty easy to read for inspiration. The
 ``query_delete`` benchmark is probably a good place to start.
 
 **Please write new benchmarks and send me pull requests on Github!**
+
+Special django_test_* benchmarks
+--------------------------------
+If you are in the tests directory of the Django source code, you can run
+benchmarks using existing django test code.
+
+For example, run::
+
+    $ djangobench --vcs=git --control=master --experiment=17256 -t 5 django_test_postgresql:comment_tests.CommentTemplateTagTests.testNumberQueries
